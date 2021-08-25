@@ -4,7 +4,8 @@
   "repository": "git@github.com:ShaunLWM/ts-template.git",
   "license": "MIT",
   "author": "ShaunLWM",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "start": "yarn watch",
     "build": "tsc",
@@ -14,7 +15,8 @@
     "eslint": "eslint 'src/**/*.ts'",
     "eslint:fix": "eslint --fix 'src/**/*.ts'",
     "prepare": "husky install",
-    "test": "jest"
+    "test": "jest",
+    "prepublish": "tsc"
   },
   "lint-staged": {
     "*.{ts,js}": [
